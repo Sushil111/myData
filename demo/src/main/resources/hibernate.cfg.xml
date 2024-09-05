@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+	
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.driver_class">org.h2.Driver</property>
+		<property name="connection.url">jdbc:h2:file:~/user</property>
+		<property name="connection.username">sa</property>
+		<property name="connection.password"></property>
+		<!-- We use dialect to provide information about which
+			database we are using, we are using h2 database -->
+		<property name="dialect">org.hibernate.dialect.H2Dialect</property>
+		<!-- This property enables us to create the
+			table everytime the program runs-->
+		<property name="hbm2ddl.auto">create</property>
+		<property name="show_sql">true</property>
+	<!--  	<property name="h2.console.enable">true</property>
+		<property name="h2.console.path">/h2</property> -->
+		<!-- List of XML mapping files -->
+		<!-- path of a mapping file, for us its our
+			Student class and Address class which is a POJO -->
+		<mapping class="com.example.demo.testWebApplication.Employee"></mapping>
+	<!--  	<mapping class="com.spring.hibernate.Address"></mapping> -->
+
+	</session-factory>
+</hibernate-configuration>

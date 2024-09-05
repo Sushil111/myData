@@ -1,0 +1,5 @@
+1) git clone --filter=blob:none --no-checkout https://github.com/eugenp/tutorials
+2) cd tutorials
+3) git sparse-checkout set --cone
+4) git checkout master
+5)git sparse-checkout set spring-core
